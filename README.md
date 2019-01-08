@@ -5,6 +5,7 @@ Writes to .csv file in the directory of download in the format jobname-location-
 Requires python 3.6 to be installed on system with PATH variable set.
 
 INSTALLATION
+
 Clone or Download the repository to a folder.
 In command prompt, navigate to the folder and run the following command:
     pip install -r requires.txt
@@ -16,8 +17,11 @@ Open up "generatelinkedin.py" in a text editor and edit lines 12 and 13 to match
 
 
 USAGE 
+
 Windows: Double click "generatelinkedin.py" file to run the file.
+
 Mac OSX: Right click and open with Python Launcher to run the file.
+
 Linux: In command line run "python path/to/generatelinkedin.py" (Replace path/to/ with the actual path of your download file)
 Enter job name and location in appropriate entry boxes and press "Find jobs" button.
 
