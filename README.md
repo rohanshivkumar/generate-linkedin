@@ -21,9 +21,14 @@ INSTALLATION
 USAGE 
 
 Windows: Double click "generatelinkedin.py" file to run the file.
+            OR
+        In command line run "python path/to/generatelinkedin.py" (Replace path/to/ with the actual path of your download file)
 
 Mac OSX: Right click and open with Python Launcher to run the file.
+           OR
+        In command line run "python path/to/generatelinkedin.py" (Replace path/to/ with the actual path of your download file)
 
 Linux: In command line run "python path/to/generatelinkedin.py" (Replace path/to/ with the actual path of your download file)
+
 Enter job name and location in appropriate entry boxes and press "Find jobs" button.
 
