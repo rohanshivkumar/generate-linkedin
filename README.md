@@ -6,10 +6,12 @@ Requires python 3.6 to be installed on system with PATH variable set.
 
 INSTALLATION
 
-Clone or Download the repository to a folder.
-In command prompt, navigate to the folder and run the following command:
+* Clone or Download the repository to a folder.
+
+* In command prompt, navigate to the folder and run the following command:
     pip install -r requires.txt
-Open up "generatelinkedin.py" in a text editor and edit lines 12 and 13 to match your google API key and your custom search engine ID
+    
+* Open up "generatelinkedin.py" in a text editor and edit lines 12 and 13 to match your google API key and your custom search engine ID
 (
     my_api_key = "" #Enter Your Google API Key
     my_cse_id = ""  #Enter Your Google Custom Search Engine ID
