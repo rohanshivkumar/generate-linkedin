@@ -1,5 +1,5 @@
 # generate-linkedin
-* Updated to work with glassdoor's login *
+* Updated to work with glassdoor's login 
 
 Searches for jobs in certain locations from glassdoor, finds LinkedIn of potential connections related to the job searched for.
 Writes to .csv file in the directory of download in the format jobname-location-results.csv(Example: tech support-san jose-job-results.csv)
