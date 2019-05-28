@@ -11,10 +11,13 @@ INSTALLATION
 * In command prompt, navigate to the folder and run the following command:
     pip install -r requires.txt
     
-* Open up "generatelinkedin.py" in a text editor and edit lines 12 and 13 to match your google API key and your custom search engine ID
+* Open up "generatelinkedin.py" in a text editor and edit lines 12,13,14,15 to match your google API key, custom search engine ID, your glassdoor email login and password respectively
 (
     my_api_key = "" #Enter Your Google API Key
     my_cse_id = ""  #Enter Your Google Custom Search Engine ID
+    my_glassdoor_email = "" #Enter your glassdoor email ID
+    my_glassdoor_pass = "" #Enter your glassdoor password
+    
 )
 
 
