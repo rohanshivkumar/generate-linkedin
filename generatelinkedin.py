@@ -11,6 +11,8 @@ from googleapiclient.discovery import build
 import tkinter as Tk
 my_api_key = "" #Enter Your Google API Key
 my_cse_id = ""  #Enter Your Google Custom Search Engine ID
+my_glassdoor_email = "" #Enter your glassdoor email ID
+my_glassdoor_pass = "" #Enter your glassdoor password
 
 def google_search(search_term, api_key, cse_id, **kwargs):
     service = build("customsearch", "v1", developerKey=api_key)
@@ -63,6 +65,7 @@ def parse(keyword, place):
         location_url, headers=location_headers, data=data).json()
     place_id = location_response[0]['locationId']
     job_listing_url = 'https://www.glassdoor.com/Job/jobs.htm'
+    login_url = 'https://www.glassdoor.com/profile/login_input.htm'
     # Form data to get job results
     data = {
         'clickSource': 'searchBtn',
@@ -71,10 +74,23 @@ def parse(keyword, place):
         'locId': place_id,
         'jobType': '',
         }
+    login_data = {
+        'username' : my_glassdoor_email,
+        'password' : my_glassdoor_pass
+    }
     job_listings = []
     if place_id:
         try:
-            response = requests.post(job_listing_url, headers=headers, data=data)
+            login_response = requests.post(login_url,headers = headers, data= login_data)
+            cookies = login_response.cookies 
+            print("Login successful")
+        except Exception:
+            print ("Login failed")
+            print(traceback.print_exc())
+            return False
+
+        try:
+            response = requests.post(job_listing_url, headers=headers, data=data,cookies = cookies)
             i = 0
             # extracting data from
             # https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=true&clickSource=searchBtn&typedKeyword=andr&sc.keyword=android+developer&locT=C&locId=1146821&jobType=
@@ -201,5 +217,4 @@ if __name__ == "__main__":
     lbl.grid(row = 3,column = 1)
     x2.config(command = lambda:action(x2,lbl,e1.get(),e2.get()))
     master.mainloop()
-    
     
